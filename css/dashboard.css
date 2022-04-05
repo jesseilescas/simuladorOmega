@@ -1,0 +1,15 @@
+:root{
+    --fuentePrincipal: 'Barlow', sans-serif;
+    --colorPrincipal: rgb(11, 73, 155);
+    --blanco: #ffffff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 62.5%;
+    
+}

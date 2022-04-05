@@ -1,0 +1,86 @@
+:root{
+    --fuentePrincipal: 'Barlow', sans-serif;
+    --colorPrincipal: rgb(11, 73, 155);
+    --blanco: #ffffff;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 62.5%;
+    background-image: url(/img/backgroundLogin.jpg);
+    
+}
+.logInform{
+  height: 100vh;
+  align-items: center;
+  
+}
+.formInput{
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73); 
+    box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73);
+    backdrop-filter: blur(10px);
+    height: 75vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.formInput h1{
+    font-size: 35px;
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 700;
+}
+.formInput label{
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-top: 15px;
+}
+.formInput input{
+    background-color:transparent;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--blanco);
+    border-style: solid;
+    border-radius: 40px;
+    width: 50%;
+    border-color: var(--blanco);
+    
+}
+.formInput button{
+    padding: 7px;
+    border: none;
+    border-radius: 40px;
+    width: 50%;
+    font-size: 1.2rem;
+    color: var(--colorPrincipal);
+    box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73);
+    transition: 0.5s;
+}
+.formInput button:hover{
+    box-shadow: 4px 0px 26px -7px rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.formLogo{
+    background-color: var(--blanco);
+    -webkit-box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73); 
+    box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73);
+    height: 75vh;
+    border-radius: 10px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formLogo img{
+    width: 80%;
+}
