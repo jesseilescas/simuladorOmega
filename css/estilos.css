@@ -14,6 +14,11 @@ body{
 
     
 }
+.imagenCalculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .logInform{
   height: 100vh;
   align-items: center;
