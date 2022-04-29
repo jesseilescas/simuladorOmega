@@ -1,41 +1,49 @@
-let dato = 'Y'
 
-while (dato != 'N') {
-    
-    const nombre = prompt('Ingrese el nombre completo del cliente')
-    const direccion = prompt('Ingrese la dirección del cliente')
-    const inversion = parseInt(prompt('Ingrese la inversion del cliente'))
-    dato = prompt('Desea continuar Y/N').toUpperCase()
-    let gananciaMensual = inversion * 0.125
-    let interesCompuesto = gananciaMensual * 16
-    let gananciaTotal = inversion + interesCompuesto
 
-    const datos =[ //se contruye objeto
-        {name: nombre, adress: direccion, inv: inversion, mens: gananciaMensual, compuesto: interesCompuesto, final: gananciaTotal}
-    ]
-        function imprimirDatos () {
-            for(const inf of datos){
-                const listaDatos = document.getElementById('listaDatos');
-                listaDatos.innerHTML = `
-                <h3>Nombre: ${inf.name}</h3>
-                <h3>Direccion: ${inf.adress}</h3>
-                <h3>Inversion Inicial: $ ${inf.inv}</h3>
-                <h3>Ganancia Mensual: $ ${inf.mens}</h3>
-                <h3>Interes Compuesto: $ ${inf.compuesto}</h3>
-                <h3>Saldo Final: $ ${inf.final}</h3>
-                <h2>Recuerda que el tiempo de trabajo son 16 meses(Valor expresado en M.N/MXN)</h2>
-                <button id="refrescarPagina" class="btn btn-dark">Calcular Nuevamene</button>
-                `
-             document.body.appendChild(listaDatos);
-
-            }    
-        }
-        imprimirDatos()
+    const btn = document.getElementById('btnGuardar')
+    btn.addEventListener('click', guardarDatos)
+        //Guardar Datos
+    function guardarDatos (){
+        let nombre = document.getElementById('nombre').value
+        sessionStorage.setItem('name', nombre)
+        let direccion = document.getElementById('direccion').value
+        sessionStorage.setItem('adress', direccion)
+        let telefono = document.getElementById('telefono').value
+        sessionStorage.setItem('phone', telefono)
+        let inversion = document.getElementById('inversion').value
+        sessionStorage.setItem('inv', inversion)
+        location.reload()
+        console.log(nombre)
+        console.log(direccion)
+        console.log(telefono)
+        console.log(inversion)
         
     }
-    const btn = document.getElementById('refrescarPagina')
-    btn.addEventListener('click', resfrescarPag)
-    function resfrescarPag(){
-        location.reload()
+    const nomb = sessionStorage.getItem('name')
+    const dir = sessionStorage.getItem('adress')
+    const tel = sessionStorage.getItem('phone')
+    const inv = parseFloat( sessionStorage.getItem('inv'))
+    //Calculo de intereses y gancia
+    let gananciaMensual = parseFloat(inv * 0.125)
+    let interesCompuesto = parseFloat(gananciaMensual * 16)
+    let gananciaTotal = parseFloat(inv + interesCompuesto)
+    
+
+    const btnMostrar = document.getElementById('btnMostrar')
+    btnMostrar.addEventListener('click', mostrarDatos)
+    const divDatos = document.getElementById('formInfo')
+    function mostrarDatos(){
+        divDatos.innerHTML = `
+        <h3>Nombre: ${nomb}</h3>
+        <h3>Direccion: ${dir}</h3>
+        <h3>Teléfono: ${tel}</h3>
+        <h3>Inversion Inicial: $ ${inv.toLocaleString('en-US')}</h3>
+        <h3>Ganancia Mensual: $ ${gananciaMensual.toLocaleString('en-US')}</h3>
+        <h3>Interes Compuesto: $ ${interesCompuesto.toLocaleString('en-US')}</h3>
+        <h3>Saldo Final: $ ${gananciaTotal.toLocaleString('en-US')}</h3>
+        `
+     document.appendChild(divDatos);
+
     }
+    
     

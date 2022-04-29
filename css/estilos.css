@@ -10,9 +10,6 @@
 }
 body{
     font-family: var(--fuentePrincipal);
-    font-size: 62.5%;
-
-    
 }
 .imagenCalculadora{
     display: flex;
@@ -88,4 +85,14 @@ body{
 }
 .formLogo img{
     width: 80%;
+}
+#sidebar{
+    width: 35%;
+    height: 100vh;
+    background: #343a43;
+    font-size: 1.4rem;
+}
+.form-alta{
+    display: flex;
+    flex-direction: column;
 }
