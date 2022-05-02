@@ -1,6 +1,5 @@
 
-
-    const btn = document.getElementById('btnGuardar')
+    let btn = document.getElementById('btnGuardar')
     btn.addEventListener('click', guardarDatos)
         //Guardar Datos
     function guardarDatos (){
@@ -12,21 +11,26 @@
         sessionStorage.setItem('phone', telefono)
         let inversion = document.getElementById('inversion').value
         sessionStorage.setItem('inv', inversion)
+        let dolar = document.getElementById('dolar').value
+        sessionStorage.setItem('dolar', dolar)
+        
         location.reload()
-        console.log(nombre)
-        console.log(direccion)
-        console.log(telefono)
-        console.log(inversion)
         
     }
     const nomb = sessionStorage.getItem('name')
     const dir = sessionStorage.getItem('adress')
     const tel = sessionStorage.getItem('phone')
     const inv = parseFloat( sessionStorage.getItem('inv'))
-    //Calculo de intereses y gancia
+    const dol = parseFloat( sessionStorage.getItem('dolar'))
+    //Calculo de intereses y ganancia
     let gananciaMensual = parseFloat(inv * 0.125)
     let interesCompuesto = parseFloat(gananciaMensual * 16)
     let gananciaTotal = parseFloat(inv + interesCompuesto)
+
+    let invPesos = parseFloat(inv * dol)
+    let gananciaMensualPesos = parseFloat(gananciaMensual * dol)
+    let interesCompuestoPesos = parseFloat(interesCompuesto* dol)
+    let gananciaTotalPesos = parseFloat(gananciaTotal * dol)
     
 
     const btnMostrar = document.getElementById('btnMostrar')
@@ -34,15 +38,20 @@
     const divDatos = document.getElementById('formInfo')
     function mostrarDatos(){
         divDatos.innerHTML = `
-        <h3>Nombre: ${nomb}</h3>
-        <h3>Direccion: ${dir}</h3>
-        <h3>Teléfono: ${tel}</h3>
-        <h3>Inversion Inicial: $ ${inv.toLocaleString('en-US')}</h3>
-        <h3>Ganancia Mensual: $ ${gananciaMensual.toLocaleString('en-US')}</h3>
-        <h3>Interes Compuesto: $ ${interesCompuesto.toLocaleString('en-US')}</h3>
-        <h3>Saldo Final: $ ${gananciaTotal.toLocaleString('en-US')}</h3>
+        <h3>Nombre: ${nomb}</h4>
+        <h4>Dirección: ${dir}</h4>
+        <h4>Teléfono: ${tel}</h4>
+        <hr>
+        <h4>Inversión Inicial: $ ${inv.toLocaleString('en-US')} USD</h4>
+        <h4>Ganancia Mensual: $ ${gananciaMensual.toLocaleString('en-US')} USD</h4>
+        <h4>Interés Compuesto: $ ${interesCompuesto.toLocaleString('en-US')} USD</h4>
+        <h4>Saldo Final: $ ${gananciaTotal.toLocaleString('en-US')} USD</h4>
+        <hr>
+        <h4>Inversión Inicial: $ ${invPesos.toLocaleString('en-US')} MXN</h4>
+        <h4>Ganancia Mensual: $ ${gananciaMensualPesos.toLocaleString('en-US')} MXN</h4>
+        <h4>Interés Compuesto: $ ${interesCompuestoPesos.toLocaleString('en-US')} MXN</h4>
+        <h4>Saldo Final: $ ${gananciaTotalPesos.toLocaleString('en-US')} MXN</h4>
         `
-     document.appendChild(divDatos);
 
     }
     

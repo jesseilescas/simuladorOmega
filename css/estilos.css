@@ -22,7 +22,7 @@ body{
   
 }
 .formInput{
-    background-color: rgba(11, 64, 179, 0.7);
+    background-color: rgb(20, 19, 19);
     -webkit-box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73); 
     box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73);
     backdrop-filter: blur(10px);
@@ -63,7 +63,7 @@ body{
     border-radius: 40px;
     width: 50%;
     font-size: 1.2rem;
-    color: var(--colorPrincipal);
+    color: #000;
     box-shadow: 4px 0px 26px -7px rgba(0,0,0,0.73);
     transition: 0.5s;
 }
