@@ -1,6 +1,12 @@
 
     let btn = document.getElementById('btnGuardar')
     btn.addEventListener('click', guardarDatos)
+    const usuarioSession = sessionStorage.getItem('usuario')
+    const nombreSession = document.querySelector('#usuarioSession')
+    nombreSession.innerHTML = `
+        <p>Hola, ${usuarioSession}        
+        `
+    
         //Guardar Datos
     function guardarDatos (){
         let nombre = document.getElementById('nombre').value
@@ -14,9 +20,14 @@
         let dolar = document.getElementById('dolar').value
         sessionStorage.setItem('dolar', dolar)
         
-        location.reload()
-        
+        swal({
+            title: "Enhorabuena",
+            text: "Los datos se registraron correctamente",
+            icon: "success",
+          });
     }
+   
+    
     const nomb = sessionStorage.getItem('name')
     const dir = sessionStorage.getItem('adress')
     const tel = sessionStorage.getItem('phone')
