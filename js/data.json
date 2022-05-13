@@ -1,0 +1,96 @@
+{
+    "tipo" : "Miembros Activos",
+    "codigo" : 100,
+    "miembros": [
+        {
+            "id": 101,
+            "nombre": "Jesse Ilescas Martinez",
+            "telefono": "9516562024",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "ilesmj9516@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 500
+        },
+        {
+            "id": 102,
+            "nombre": "Cesar Santiago Morales",
+            "telefono": "9513504465",
+            "direccion": "Eucaliptos 204 Sección el Polvorín, la Experimental Oaxaca",
+            "usuario": "cesm19@gmail.com",
+            "contraseña": "32252",
+            "inversionInicial": 1000
+        },
+        {
+            "id": 103,
+            "nombre": "Rosario Martinez Vega",
+            "telefono": "9513266958",
+            "direccion": "Primera privada de pipila 204 Mi Ranchito Xoxocotlan Oaxaca",
+            "usuario": "rosyvega_71@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 3000
+        },
+        {
+            "id": 104,
+            "nombre": "Jaime Ilescas Juarez",
+            "telefono": "9512109657",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "jaime.ilescas@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 700
+        },
+        {
+            "id": 105,
+            "nombre": "Ivan Ilescas Martinez",
+            "telefono": "9513245212",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "ivan.ilescas@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 1000
+        },
+        {
+            "id": 101,
+            "nombre": "Jesse Ilescas Martinez",
+            "telefono": "9516562024",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "ilesmj9516@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 500
+        },
+        {
+            "id": 102,
+            "nombre": "Cesar Santiago Morales",
+            "telefono": "9513504465",
+            "direccion": "Eucaliptos 204 Sección el Polvorín, la Experimental Oaxaca",
+            "usuario": "cesm19@gmail.com",
+            "contraseña": "32252",
+            "inversionInicial": 1000
+        },
+        {
+            "id": 103,
+            "nombre": "Rosario Martinez Vega",
+            "telefono": "9513266958",
+            "direccion": "Primera privada de pipila 204 Mi Ranchito Xoxocotlan Oaxaca",
+            "usuario": "rosyvega_71@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 3000
+        },
+        {
+            "id": 104,
+            "nombre": "Jaime Ilescas Juarez",
+            "telefono": "9512109657",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "jaime.ilescas@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 700
+        },
+        {
+            "id": 105,
+            "nombre": "Ivan Ilescas Martinez",
+            "telefono": "9513245212",
+            "direccion": "Benemerito de las Americas 502 Colonia 21 de Marzo, Santa Cruz Xoxocotlan Oaxaca",
+            "usuario": "ivan.ilescas@gmail.com",
+            "contraseña": "151216",
+            "inversionInicial": 1000
+        }
+    ]
+}

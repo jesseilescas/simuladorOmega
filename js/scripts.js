@@ -6,7 +6,6 @@
     nombreSession.innerHTML = `
         <p>Hola, ${usuarioSession}        
         `
-    
         //Guardar Datos
     function guardarDatos (){
         let nombre = document.getElementById('nombre').value
@@ -65,5 +64,5 @@
         `
 
     }
-    
-    
+   
+        
