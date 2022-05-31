@@ -96,3 +96,12 @@ body{
     display: flex;
     flex-direction: column;
 }
+#navbarsExample07XL{
+    justify-content: flex-end;
+}
+.form-simulacion{
+    display: none;
+}
+.tablaSimulacion{
+    display: none;
+}

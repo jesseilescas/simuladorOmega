@@ -8,7 +8,7 @@ function ingresar(){
     
     if (usuario == 'ADMINISTRADOR' && password == '12345') {
         sessionStorage.setItem('usuario', usuario)
-        window.open('../views/principal.html', '_self')
+        window.open('../views/registrarSocio.html', '_self')
            
     }else{
         alert('Ingrese Usuario y/o Contraseña corrrectos')

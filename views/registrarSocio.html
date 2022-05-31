@@ -27,14 +27,14 @@
     <div id="sidebar">
       <div class="p-2">
         <a href="#" class="navbar-brand text-center text-light w-100 p-4 border-bottom">
-          Sidebar
+          OMEGAPRO
         </a>
       </div>
-      <div id="sidebar-accordion" class="accordion">
+      <div id="sidebar-accordion" class="accordion ">
         <div class="list-group">
           <a href="./registrarSocio.html" 
             class="list-group-item list-group-item-action bg-dark text-light">
-            </i>Registrar Socio
+            </i>Simulador de Inversion
           </a>
           <!---->
           <div id="dashboard-items" class="collapse" data-parent="#sidebar-accordion">
@@ -70,31 +70,9 @@
     <div class="content w-100">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-xl">
-          <a class="navbar-brand" href="#">Container XL</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
+          
           <div class="collapse navbar-collapse" id="navbarsExample07XL">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown07XL">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-            </ul>
+      
             <div id="usuarioSession" style="color: #fff;">
               
             </div>
@@ -107,22 +85,19 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header text-right">
-                  Alta de Socio
+                  Registro de Datos
                 </div>
                 <div class="card-body form-alta">
                   <label for="nombre">Nombre: </label>
                   <input type="text" id="nombre" placeholder="Inserta nombre completo" class="pb-1">
-
-                  <label for="direccion">Dirección: </label>
-                  <input type="text" id="direccion" placeholder="Dirección">
                   
                   <label for="telefono" >Teléfono: </label>
                   <input type="number" id="telefono" placeholder="Teléfono">
 
-                  <label for="inversion">Inversion Inicial: </label>
+                  <label for="inversion">Inversion Inicial (USD): </label>
                   <input type="text" id="inversion" placeholder="0.00">
 
-                  <label for="inversion">Precio del dolar: </label>
+                  <label for="inversion">Precio del dolar (MXM): </label>
                   <input type="text" id="dolar" placeholder="0.00">
                  
                   <div class="alta-buttons">
@@ -131,18 +106,64 @@
                       
                 </div>
                 <div class="card">
-                    <div class="card-header text-right">
-                      Calculadora de prospección
+                  <div class="card-header text-right">
+                    Simulacion sin Retiros
+                  </div>
+                  <button type="button" class="btn btn-dark mt-3 w-100" id="btnSimulacion">Crear Simulación</button>
+                  <div class="card-body form-alta">
+                    <div class="form-simulacion" id="simulacion">
+                      <form action="">
+                        <label for=""  class="col-4">Fecha: </label>
+                        <input type="text" class="col-7 " id="fecha-ahora" disabled>
+                        <label for="nombre"class="col-2  ">Nombre: </label>
+                        <input type="text" class="col-3  " id="simNombre" disabled>
+                        <label for="nombre" class="col-2 ">Teléfono: </label>
+                        <input type="text" class="col-4" id="simTelefono" disabled>
+                        <label for="nombre"class="col-2" >Capital: </label>
+                        <input type="text" class="col-4" id="capitalU"disabled>
+                        <input type="text" class="col-5" id="capitalM" disabled>
+                        <label for="nombre" class="col-2" >Costo de Registro: </label>
+                        <input type="text" class="col-4" id="registroU" disabled>
+                        <input type="text"  class="col-5"id="registroM" disabled>
+                        <label for="nombre" class="col-2" >Inversión Total: </label>
+                        <input type="text" class="col-4" id="totalU"disabled>
+                        <input type="text" class="col-5" id="totalM" disabled>
+                        <label for="nombre" class="col-2" >Retorno de Inversión: </label>
+                        <input type="text" class="col-4" id="retornoU" disabled>
+                        <input type="text" class="col-5" id="retornoM" disabled>
+                        <label for="nombre" class="col-2" >Utilidad Bruta: </label>
+                        <input type="text" class="col-4" id="utilidadU" disabled>
+                        <input type="text" class="col-5" id="utilidadM" disabled>
+                        <label for="nombre" class="col-2" >Periodo de Inversión: </label>
+                        <label   class="col-4" >1 Año, 4 meses (16 Meses)
+
                     </div>
-                    <div class="card-body form-alta">
-                      <button type="button" class="btn btn-dark mt-3 w-100" id="btnMostrar">Mostrar Datos Guardados</button>
-                      <div id="formInfo" class="text-center">
-    
-                      </div>
-    
-                          
-                    </div>                     
+                      
+
+                    </form>
+                    
                     </div>
+                    <div class="tablaSimulacion" id="tablaSim"> <!--Tabla simulacion-->
+
+                        <table class="table  table-hover">
+                          <thead class="thead-dark">
+                            <tr class="text-center">
+                              <th scope="col">Mes</th>
+                              <th scope="col">Interes Generado (Mensual)</th>
+                              <th scope="col">Nuevo Saldo</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tablaSimulacion" class="text-center">
+                          </tbody>
+                        </table>
+                       
+                          </tbody>
+                        </table>
+                    </div>
+  
+                        
+                  </div>                     
+              </div>
                   
                 </div>
               </div>
@@ -161,6 +182,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>

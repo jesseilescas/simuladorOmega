@@ -1,5 +1,10 @@
  //fetch a data json
  const tabla = document.querySelector("#tablaActivos")
+ const usuarioSession = sessionStorage.getItem('usuario')
+ const nombreSession = document.querySelector('#usuarioSession')
+    nombreSession.innerHTML = `
+        <p>Hola, ${usuarioSession}        
+        `
  
  fetch('../js/data.json')
  .then(datos => datos.json())
